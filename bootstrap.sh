@@ -24,3 +24,7 @@ EOF
 php5enmod mcrypt
 a2enmod rewrite
 service apache2 restart
+
+curl -sS https://getcomposer.org/installer | php -- --install-dir=/vagrant
+cd /vagrant
+php composer.phar install

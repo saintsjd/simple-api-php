@@ -1,6 +1,7 @@
 <?php
+require 'vendor/autoload.php';
 
-$f3 = require('lib/base.php');
+$f3 = require('vendor/bcosca/fatfree/lib/base.php');
 
 $f3->set('DEBUG', getenv("SECRET_KEY"));
 $f3->set('AUTOLOAD','controllers/; models/; lib/');

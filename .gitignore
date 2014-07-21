@@ -1,3 +1,6 @@
 .htaccess
 data
 .vagrant
+composer.lock
+composer.phar
+vendor/
