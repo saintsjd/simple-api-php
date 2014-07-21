@@ -106,6 +106,9 @@ class UsersController extends BaseController{
         $raw_data = $request_json['users'][0];
 
         $attr_accessible = array( 'email','password' );
+        if( $f3->get('authenticated_user')->isAdmin() ) {
+            $attr_accessible = array( 'email','password','roles' );            
+        }
         $user->hydrate($raw_data, $attr_accessible );
 
         $errors = $user->validate();
